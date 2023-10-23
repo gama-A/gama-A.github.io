@@ -12,3 +12,12 @@ i {
     color: beige;
     font-size: 3em;
 }
+
+a {
+    text-decoration: none;
+}
+
+textarea, input {
+    background-color: beige !important;
+    color: black !important;
+}
