@@ -18,8 +18,8 @@ a {
 }
 
 form {
-    margin-left: 25vw;
-    margin-right: 25vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 textarea, input {
@@ -32,9 +32,18 @@ textarea, input {
     margin-right: 50vw;
 }
 
-@media (min-width: 280px) and (max-width: 767px) {
+@media (max-width: 700px) {
     #intro {
         margin-left: 0.25vw;
         margin-right: 15vw;
+    }
+
+    form {
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+
+    .row {
+        flex-direction: column;
     }
 }
