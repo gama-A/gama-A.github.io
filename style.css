@@ -17,6 +17,11 @@ a {
     text-decoration: none;
 }
 
+form {
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
 textarea, input {
     background-color: beige !important;
     color: black !important;
