@@ -32,6 +32,11 @@ textarea, input {
     margin-right: 50vw;
 }
 
+#status {
+    color: red;
+    font-weight: 700;
+}
+
 @media (max-width: 700px) {
     #intro {
         margin-left: 0.25vw;
