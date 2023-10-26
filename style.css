@@ -13,6 +13,12 @@ i {
     font-size: 3em;
 }
 
+.projects {
+    vertical-align: middle;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
 a {
     text-decoration: none;
 }
