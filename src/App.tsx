@@ -1,7 +1,7 @@
 import './css/App.css'
 import theme from './css/theme'
 import { TabsComponent, getTabs } from './components/Tabs'
-import { Card, CardContent, ThemeProvider, Typography, Box } from '@mui/material'
+import { Card, CardContent, ThemeProvider, Typography, Box, Divider } from '@mui/material'
 import { Image } from 'mui-image'
 import { AboutComponent } from './components/About'
 
@@ -17,8 +17,16 @@ function App() {
             minHeight: 0,
             maxHeight: '100vh',
           }}>
-          <Box sx={{ display: 'flex', flex: '1 1 auto', gap: 2, flexDirection: { xs: 'column', md: 'row' }, alignItems: 'flex-start', minHeight: 0 }}>
-            <Box sx={{ flex: { xs: '1 1 auto', md: '0 0 30%' }, minWidth: 0 }}>
+          <Box
+            sx={{
+              display: 'flex',
+              flex: '1 1 auto',
+              gap: 2,
+              flexDirection: { xs: 'column', md: 'row' },
+              alignItems: { xs: 'flex-start', md: 'stretch' },
+              minHeight: 0 
+            }}>
+            <Box sx={{ flex: { md: '0 0 30%' }, minWidth: 0 }}>
               <Typography variant="h1" component="div" align="left">Gama Aristondo</Typography>
               <Typography variant="h2" component="div" align="left">Welcome to my page</Typography>
               <Card style={{ backgroundColor: 'rgb(35,35,35)' }}>
@@ -34,8 +42,8 @@ function App() {
                 height="65vh"
               />
             </Box>
-            <Box sx={{ display: { xs: 'none', md: 'block' }, width: '1px', bgcolor: '#ffffffcc', mx: 1, alignSelf: 'stretch' }} />
-            <Box sx={{ flex: { xs: '1 1 auto', md: '1 1 70%' }, minHeight: 0, overflow: 'auto' }}>
+            <Divider orientation="vertical" flexItem sx={{ display: { xs: 'none', md: 'block' }, bgcolor: 'text.primary', mx: 1 }} />
+            <Box sx={{ flex: { md: '1 1 70%' }, minHeight: 0, overflow: 'auto' }}>
               <TabsComponent tabs={getTabs} />
             </Box>
           </Box>

@@ -21,7 +21,7 @@ export function ResumeTab() {
                     <MuiLink component={Link} to="https://engineering.ucsb.edu/" sx={{ display: 'flex', alignItems: 'center' }}>
                         <Avatar
                             alt="UCSB Logo"
-                            src="/src/assets/gaucho.webp"
+                            src="/src/assets/resume-tab/gaucho.webp"
                             variant='rounded'
                             sx={{ width: 90, height: 90 }}
                         />
@@ -63,7 +63,7 @@ export function ResumeTab() {
                         component="img"
                         sx={{ height: 50, width: 91 }}
                         alt="Sonatech Logo"
-                        src="/src/assets/sonatech.png" 
+                        src="/src/assets/resume-tab/sonatech.png" 
                     />
                 </MuiLink>
                 <Stack direction="column" sx={{ gap: 'clamp(0.25rem, 1.2vw, 0.75rem)' }}>
@@ -108,7 +108,7 @@ export function ResumeTab() {
                         component="img"
                         sx={{ height: 91, width: 91 }}
                         alt="ILM Logo"
-                        src="/src/assets/ilm.png" 
+                        src="/src/assets/resume-tab/ilm.png" 
                     />
                 </MuiLink>
                 <Box>
@@ -136,7 +136,7 @@ export function ResumeTab() {
                         component="img"
                         sx={{ height: 91, width: 91 }}
                         alt="Northrop Grumman Logo"
-                        src="/src/assets/ng.png" 
+                        src="/src/assets/resume-tab/ng.png" 
                     />
                 </MuiLink>
                 <Box>
