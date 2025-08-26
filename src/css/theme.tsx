@@ -30,6 +30,24 @@ const theme = createTheme({
             color: '#ffffffcc',
         }
     },
+    palette: {
+        mode: 'dark',
+        primary: {
+            main: '#003660',
+
+        },
+        secondary: {
+            main: '#09847A',
+        },
+        background: {
+            default: '#121212',
+            paper: '#1e1e1e',
+        },
+        text: {
+            primary: '#ffffffcc',
+            secondary: '#bbbbbbcc',
+        },
+    },
 })
 
 export default theme;

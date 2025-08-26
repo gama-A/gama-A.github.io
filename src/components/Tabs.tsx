@@ -44,12 +44,12 @@ export function TabsComponent({ tabs }: TabsComponentProps) {
                 onChange={handleChange}
                 centered
                 textColor="inherit"
-                indicatorColor="primary"
+                indicatorColor="secondary"
                 variant="standard"
                 sx={{
                     borderBottom: 1,
-                    borderColor: 'divider',
-                    px: 1
+                    borderColor: 'text.primary',
+                    py: 1.5
                 }}
             >
                 {tabs.map((tab, index) => (
