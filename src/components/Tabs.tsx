@@ -3,6 +3,7 @@ import { Tabs, Tab, Box, Typography } from "@mui/material";
 import { PhotosTab } from "./Photos";
 import { MusicTab } from "./Music";
 import { ResumeTab } from "./Resume";
+import { AboutTab } from "./About";
 
 export interface TabItems {
     label: string;
@@ -16,6 +17,10 @@ interface TabsComponentProps {
 export const getTabs: TabItems[] =
 [
     {
+        label: 'About Me',
+        content: (<AboutTab />)
+    },
+    {
         label: 'Resume',
         content: (<ResumeTab />)
     },
@@ -26,7 +31,7 @@ export const getTabs: TabItems[] =
     {
         label: 'Music',
         content: (<MusicTab />)
-    }
+    },
 ];
 
 

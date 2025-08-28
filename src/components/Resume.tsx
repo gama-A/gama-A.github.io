@@ -28,7 +28,7 @@ export function ResumeTab() {
                     </MuiLink>
                     <Box>
                         <Typography variant="h4">UC Santa Barbara</Typography>
-                        <Typography variant="h5">Computer Science BS</Typography>
+                        <Typography variant="h5">B.S. Computer Science</Typography>
                     </Box>
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', justifySelf: 'center' }}>
