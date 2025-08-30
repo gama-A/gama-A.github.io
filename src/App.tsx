@@ -36,7 +36,7 @@ function App() {
                       <Muilink href="https://www.linkedin.com/in/gama-aristondo-634a80210/" underline='hover'>
                           <Avatar
                               alt="linkedin"
-                              src="/src/assets/in-logo/InBug-White.png"
+                              src="https://lh3.googleusercontent.com/d/1mo6tAKDekaewp4j08JDxmz3vVI-0Vf1L"
                               variant="square"
                           />
                       </Muilink>
@@ -47,7 +47,7 @@ function App() {
               <Image
                 className='self-portrait'
                 alt="Self Portrait"
-                src="/src/assets/portrait.jpg"
+                src="https://lh3.googleusercontent.com/d/1EOo0euXUXRrdqpEWXCHLaA8waWsdg8nv"
                 width="25vw"
                 height="65vh"
               />
