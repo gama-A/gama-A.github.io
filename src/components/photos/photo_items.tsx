@@ -142,9 +142,11 @@ export const portraitPhotos = [
         cols: 2,
     },
     {
-        img: '/src/assets/photos-tab/portraits/dog1.jpg',
+        img: '/src/assets/photos-tab/portraits/grad4.jpg',
         title: 'photo4',
-        rows: 2,
-        cols: 2,
+    },
+    {
+        img: '/src/assets/photos-tab/portraits/dog1.jpg',
+        title: 'photo5',
     }
 ]

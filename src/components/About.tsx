@@ -1,9 +1,11 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 export function AboutTab() {
     return (
+        <Box sx={{ p: 5 }}>
         <Typography>
-            hello
+            Hello. This site is designed to showcase my current work experience and interests
         </Typography>
+        </Box>
     );
 }

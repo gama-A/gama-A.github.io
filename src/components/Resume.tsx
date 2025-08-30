@@ -21,9 +21,8 @@ export function ResumeTab() {
                     <MuiLink component={Link} to="https://engineering.ucsb.edu/" sx={{ display: 'flex', alignItems: 'center' }}>
                         <Avatar
                             alt="UCSB Logo"
-                            src="/src/assets/resume-tab/gaucho.webp"
-                            variant='rounded'
-                            sx={{ width: 90, height: 90 }}
+                            src="https://lh3.googleusercontent.com/d/1jNw5Ywwq56FHP8AJzoBlShaY7O49cAPC=s220?authuser=0"
+                            style={{ width: 90, height: 90, borderRadius: 8 }}
                         />
                     </MuiLink>
                     <Box>
@@ -63,7 +62,7 @@ export function ResumeTab() {
                         component="img"
                         sx={{ height: 50, width: 91 }}
                         alt="Sonatech Logo"
-                        src="/src/assets/resume-tab/sonatech.png" 
+                        src="https://lh3.googleusercontent.com/d/1xj0xzp5uX71JzY9_-CohhenscySuec7m=s220?authuser=0" 
                     />
                 </MuiLink>
                 <Stack direction="column" sx={{ gap: 'clamp(0.25rem, 1.2vw, 0.75rem)' }}>
@@ -108,7 +107,7 @@ export function ResumeTab() {
                         component="img"
                         sx={{ height: 91, width: 91 }}
                         alt="ILM Logo"
-                        src="/src/assets/resume-tab/ilm.png" 
+                        src="https://lh3.googleusercontent.com/d/1m_qQIBihl8P_KXaFqsUzTGl9IkaASdur=s220?authuser=0" 
                     />
                 </MuiLink>
                 <Box>
@@ -136,7 +135,7 @@ export function ResumeTab() {
                         component="img"
                         sx={{ height: 91, width: 91 }}
                         alt="Northrop Grumman Logo"
-                        src="/src/assets/resume-tab/ng.png" 
+                        src="https://lh3.googleusercontent.com/d/1MprqR4nGxh0aVFMWZ61iTVhJDX6CPTl8=s220?authuser=0" 
                     />
                 </MuiLink>
                 <Box>

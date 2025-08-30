@@ -33,7 +33,7 @@ function App() {
                 <CardContent>
                   <Typography component="div" variant="body1" align="left">
                       Feel free to explore the tabs to see my work, experience and interests.<br/>Contact me:<br/>
-                      <Muilink href="https://www.linkedin.com/in/gama-aristondo-634a80210/">
+                      <Muilink href="https://www.linkedin.com/in/gama-aristondo-634a80210/" underline='hover'>
                           <Avatar
                               alt="linkedin"
                               src="/src/assets/in-logo/InBug-White.png"
