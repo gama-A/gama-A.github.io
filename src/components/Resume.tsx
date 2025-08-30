@@ -2,6 +2,8 @@ import { Avatar, Box, Stack, Typography, List, ListItem } from "@mui/material";
 import MuiLink from '@mui/material/Link';
 import { Link } from "react-router-dom";
 
+// TODO: change the box elements here to Grid elements
+
 export function ResumeTab() {
     return (
     <Box className='resume-education' display="flex" flexDirection={"column"} sx={{ gap: 'clamp(0.5rem, 1.5vw, 1rem)' }}>
