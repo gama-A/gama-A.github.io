@@ -57,67 +57,67 @@ export const glitchPhotos = [
 
 export const landscapePhotos = [
   {
-    img: '/src/assets/photos-tab/landscapes/guate1.jpg',
+    img: 'https://res.cloudinary.com/ddblggaen/image/upload/v1756532377/guate1_qiteyt.jpg',
     title: 'photo1',
     rows: 3,
     cols: 2,
   },
   {
-    img: '/src/assets/photos-tab/landscapes/guate2.jpg',
+    img: 'https://res.cloudinary.com/ddblggaen/image/upload/v1756532377/guate2_hb6u86.jpg',
     title: 'photo2',
     rows: 2,
     cols: 2,
   },
   {
-    img: '/src/assets/photos-tab/landscapes/japan1.jpg',
+    img: 'https://res.cloudinary.com/ddblggaen/image/upload/v1756533169/japan1_vr2nlb.jpg',
     title: 'photo3',
     rows: 2,
     cols: 2,
   },
   {
-    img: '/src/assets/photos-tab/landscapes/utah1.jpg',
+    img: 'https://res.cloudinary.com/ddblggaen/image/upload/v1756533169/utah1_qw4ad6.jpg',
     title: 'photo4',
     rows: 3,
   },
   {
-    img: '/src/assets/photos-tab/landscapes/vietnam1.jpg',
+    img: 'https://res.cloudinary.com/ddblggaen/image/upload/v1756533170/vietnam1_smr2tn.jpg',
     title: 'photo5',
     rows: 2,
   },
   {
-    img: '/src/assets/photos-tab/landscapes/vietnam2.jpg',
+    img: 'https://res.cloudinary.com/ddblggaen/image/upload/v1756533170/vietnam2_zo7c5t.jpg',
     title: 'photo6',
     rows: 2,
     cols: 2,
   },
   {
-    img: '/src/assets/photos-tab/landscapes/vietnam3.jpg',
+    img: 'https://res.cloudinary.com/ddblggaen/image/upload/v1756533170/vietnam3_tjcqkm.jpg',
     title: 'photo7',
     rows: 2,
   },
   {
-    img: '/src/assets/photos-tab/landscapes/vietnam4.jpg',
+    img: 'https://res.cloudinary.com/ddblggaen/image/upload/v1756533171/vietnam4_nflzp1.jpg',
     title: 'photo8',
     rows: 2,
   },
   {
-    img: '/src/assets/photos-tab/landscapes/yosemite1.jpg',
+    img: 'https://res.cloudinary.com/ddblggaen/image/upload/v1756533172/yosemite1_bdbuoi.jpg',
     title: 'photo9',
     rows: 2,
     cols: 2,
   },
   {
-    img: '/src/assets/photos-tab/landscapes/yosemite2.jpg',
+    img: 'https://res.cloudinary.com/ddblggaen/image/upload/v1756533173/yosemite2_cfze5c.jpg',
     title: 'photo10',
     rows: 3,
   },
   {
-    img: '/src/assets/photos-tab/landscapes/yosemite3.jpg',
+    img: 'https://res.cloudinary.com/ddblggaen/image/upload/v1756533174/yosemite3_mjfnzg.jpg',
     title: 'photo11',
     rows: 2,
   },
   {
-    img: '/src/assets/photos-tab/landscapes/yosemite4.jpg',
+    img: 'https://res.cloudinary.com/ddblggaen/image/upload/v1756533174/yosemite4_dmtgtj.jpg',
     title: 'photo12',
     rows: 2,
     cols: 2,
@@ -125,28 +125,28 @@ export const landscapePhotos = [
 ]
 
 export const portraitPhotos = [
-    {
-        img: '/src/assets/photos-tab/portraits/grad1.jpg',
-        title: 'photo1',
-        rows: 2,
-    },
-    {
-        img: '/src/assets/photos-tab/portraits/grad2.jpg',
-        title: 'photo2',
-        rows: 2,
-    },
-    {
-        img: '/src/assets/photos-tab/portraits/grad3.jpg',
-        title: 'photo3',
-        rows: 3,
-        cols: 2,
-    },
-    {
-        img: '/src/assets/photos-tab/portraits/grad4.jpg',
-        title: 'photo4',
-    },
-    {
-        img: '/src/assets/photos-tab/portraits/dog1.jpg',
-        title: 'photo5',
-    }
+  {
+    img: 'https://lh3.googleusercontent.com/d/1m1vGcD7xPcpBvB47YioP_pn6kjJUlVwD',
+    title: 'photo1',
+    rows: 2,
+  },
+  {
+    img: '/src/assets/photos-tab/portraits/grad2.jpg',
+    title: 'photo2',
+    rows: 2,
+  },
+  {
+    img: '/src/assets/photos-tab/portraits/grad3.jpg',
+    title: 'photo3',
+    rows: 3,
+    cols: 2,
+  },
+  {
+    img: '/src/assets/photos-tab/portraits/grad4.jpg',
+    title: 'photo4',
+  },
+  {
+    img: '/src/assets/photos-tab/portraits/dog1.jpg',
+    title: 'photo5',
+  }
 ]

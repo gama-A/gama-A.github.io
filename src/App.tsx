@@ -2,7 +2,6 @@ import './css/App.css'
 import theme from './css/theme'
 import { TabsComponent, getTabs } from './components/Tabs'
 import { Card, CardContent, ThemeProvider, Typography, Box, Divider, Avatar } from '@mui/material'
-import { Image } from 'mui-image'
 import Muilink from '@mui/material/Link'
 
 function App() {
@@ -36,7 +35,7 @@ function App() {
                       <Muilink href="https://www.linkedin.com/in/gama-aristondo-634a80210/" underline='hover'>
                           <Avatar
                               alt="linkedin"
-                              src="https://lh3.googleusercontent.com/d/1mo6tAKDekaewp4j08JDxmz3vVI-0Vf1L"
+                              src="/src/assets/InBug-White.png"
                               variant="square"
                           />
                       </Muilink>
@@ -44,13 +43,19 @@ function App() {
                   </Typography>
                 </CardContent>
               </Card>
-              <Image
-                className='self-portrait'
-                alt="Self Portrait"
-                src="https://lh3.googleusercontent.com/d/1EOo0euXUXRrdqpEWXCHLaA8waWsdg8nv"
-                width="25vw"
-                height="65vh"
-              />
+              <Box
+                component="img"
+                src="https://res.cloudinary.com/ddblggaen/image/upload/v1756532619/portrait_rkbjeg.jpg"
+                sx={{
+                  width: "100%",
+                  height: "auto",
+                  maxWidth: "100%",
+                  maxHeight: "60vh",
+                  objectFit: "contain",
+                  display: "block"
+                }}
+              >
+              </Box>
             </Box>
             <Divider orientation="vertical" flexItem sx={{ display: { xs: 'none', md: 'block' }, bgcolor: 'text.primary', mx: 1 }} />
             <Box sx={{ flex: { md: '1 1 70%' }, minHeight: 0, overflow: 'auto' }}>
