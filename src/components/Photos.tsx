@@ -14,7 +14,7 @@ export function PhotosTab() {
     return (
       <Box sx={{ p: 2 }}>
         <Typography variant="h4" component="div" align="left" gutterBottom>
-          Landscape/Street Photography
+          Nature/Street Photography
         </Typography>
         <ImageList
           sx={{ width: '500', height: '400' }}
@@ -33,7 +33,7 @@ export function PhotosTab() {
           ))}
         </ImageList>
         <Typography variant="h4" component="div" align="left" gutterBottom>
-          Graduation/Portrait Photography
+          Person Photography
         </Typography>
         <ImageList
           sx={{ width: '500', height: '400' }}
@@ -52,7 +52,7 @@ export function PhotosTab() {
           ))}
         </ImageList>
         <Typography variant="h4" component="div" align="left" gutterBottom>
-          Glitched Photography Portfolio
+          Glitched Photography
         </Typography>
         <ImageList
           sx={{ width: '500', height: '400' }}

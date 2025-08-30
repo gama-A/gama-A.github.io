@@ -131,22 +131,22 @@ export const portraitPhotos = [
     rows: 2,
   },
   {
-    img: '/src/assets/photos-tab/portraits/grad2.jpg',
+    img: 'https://lh3.googleusercontent.com/d/1QzKsmn-p8Hc70-em_Sdh2P_8wrwnONKX',
     title: 'photo2',
     rows: 2,
   },
   {
-    img: '/src/assets/photos-tab/portraits/grad3.jpg',
+    img: 'https://lh3.googleusercontent.com/d/1jMoe1QFNYhbLeDRb5TFYbZ_jmTVx2fLt',
     title: 'photo3',
     rows: 3,
     cols: 2,
   },
   {
-    img: '/src/assets/photos-tab/portraits/grad4.jpg',
+    img: 'https://lh3.googleusercontent.com/d/161SFR3U40h2neJLzOgKWK6eRpjv_DOFz',
     title: 'photo4',
   },
   {
-    img: '/src/assets/photos-tab/portraits/dog1.jpg',
+    img: 'https://lh3.googleusercontent.com/d/1Le7_Dnnlssq7W3sp6r7eUiry6syzNUwa',
     title: 'photo5',
   }
 ]
