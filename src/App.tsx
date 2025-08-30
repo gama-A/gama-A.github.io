@@ -35,7 +35,7 @@ function App() {
                       <Muilink href="https://www.linkedin.com/in/gama-aristondo-634a80210/" underline='hover'>
                           <Avatar
                               alt="linkedin"
-                              src="/assets/InBug-White.png"
+                              src={import.meta.env.BASE_URL + "/assets/InBug-White.png"}
                               variant="square"
                           />
                       </Muilink>
