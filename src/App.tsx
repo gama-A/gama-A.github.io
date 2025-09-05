@@ -2,19 +2,21 @@ import './css/App.css'
 import theme from './css/theme'
 import { TabsComponent, getTabs } from './components/Tabs'
 import { Card, CardContent, ThemeProvider, Typography, Box, Divider, Avatar } from '@mui/material'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import Muilink from '@mui/material/Link'
 
 function App() {
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <>
       <ThemeProvider theme={theme}>
         <Box
           sx={{
-            height: '100%',
+            height: { xs: 'auto', md: '100%'},
             display: 'flex',
             flexDirection: 'column',
             minHeight: 0,
-            maxHeight: '100vh',
+            maxHeight: { xs: 'auto', md: '100vh'},
           }}>
           <Box
             sx={{
@@ -23,7 +25,7 @@ function App() {
               gap: 2,
               flexDirection: { xs: 'column', md: 'row' },
               alignItems: { xs: 'flex-start', md: 'stretch' },
-              minHeight: 0 
+              overflow: { xs: 'visible', md: 'hidden' },
             }}>
             <Box sx={{ flex: { md: '0 0 30%' }, minWidth: 0 }}>
               <Typography variant="h1" component="div" align="left">Gama Aristondo</Typography>
@@ -56,9 +58,14 @@ function App() {
                 }}
               >
               </Box>
+              {isMobile && (
+                <Box sx={{ mt: 2 }}>
+                  <TabsComponent tabs={getTabs} />
+                </Box>
+              )}
             </Box>
             <Divider orientation="vertical" flexItem sx={{ display: { xs: 'none', md: 'block' }, bgcolor: 'text.primary', mx: 1 }} />
-            <Box sx={{ flex: { md: '1 1 70%' }, minHeight: 0, overflow: 'auto' }}>
+            <Box sx={{ flex: { md: '1 1 70%' }, minHeight: 0, overflow: 'auto', display: isMobile ? 'none' : 'block' }}>
               <TabsComponent tabs={getTabs} />
             </Box>
           </Box>
