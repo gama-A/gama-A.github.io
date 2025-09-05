@@ -1,4 +1,4 @@
-import { Avatar, Box, Stack, Typography, List, ListItem } from "@mui/material";
+import { Avatar, Box, Stack, Typography, List, ListItem, Grid } from "@mui/material";
 import MuiLink from '@mui/material/Link';
 import { Link } from "react-router-dom";
 
@@ -6,54 +6,57 @@ import { Link } from "react-router-dom";
 
 export function ResumeTab() {
     return (
-    <Box className='resume-education' display="flex" flexDirection={"column"} sx={{ gap: 'clamp(0.5rem, 1.5vw, 1rem)' }}>
+        <Stack spacing={2}>
             <Box sx={{ px: 2, width: '100%' }}>
                 <Typography variant="h2" align={"center"}>Education</Typography>
             </Box>
-            <Box
-                sx={{
-                    display: 'grid',
-                    gridTemplateColumns: { xs: '1fr', md: '1fr auto 1fr' },
-                    gap: 'clamp(0.5rem, 2vw, 1rem)',
-                    alignItems: 'center',
-                    px: 2,
-                }}
-            >
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 'clamp(0.25rem, 1.5vw, 0.75rem)', minWidth: 0 }}>
-                    <MuiLink component={Link} to="https://engineering.ucsb.edu/" sx={{ display: 'flex', alignItems: 'center' }}>
-                        <Avatar
-                            alt="UCSB Logo"
-                            src="https://lh3.googleusercontent.com/d/1jNw5Ywwq56FHP8AJzoBlShaY7O49cAPC=s220?authuser=0"
-                            style={{ width: 90, height: 90, borderRadius: 8 }}
-                        />
-                    </MuiLink>
-                    <Box>
-                        <Typography variant="h4">UC Santa Barbara</Typography>
-                        <Typography variant="h5">B.S. Computer Science</Typography>
-                    </Box>
-                </Box>
-                <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', justifySelf: 'center' }}>
-                    <Typography variant="h5">September 2019 - June 2023</Typography>
-                    <Typography variant="h5">Cumulative GPA: 3.3</Typography>
-                </Box>
-                <Box sx={{ gap: 'clamp(0.5rem, 1.5vw, 1rem)', minWidth: 0, justifyContent: 'flex-start', alignItems: 'flex-start' }}>
-                    <Typography variant="h6" sx={{ mb: 0.5 }}>Relevant Coursework/Programs</Typography>
-                    <Box sx={{ display: 'flex', gap: 'clamp(0.5rem, 1.5vw, 1rem)', minWidth: 0, justifyContent: 'flex-start', alignItems: 'flex-start' }}>
-                        <Box sx={{ flex: 1, minWidth: 120 }}>
-                            <List sx={{ listStyleType: 'disc', pl: 4, mt: 0 }}>
-                                <ListItem sx={{ display: 'list-item', p: 0 }}>Computer Graphics</ListItem>
-                                <ListItem sx={{ display: 'list-item', p: 0 }}>Human Computer Interaction</ListItem>
-                                <ListItem sx={{ display: 'list-item', p: 0 }}>Interactive Systems</ListItem>
-                            </List>
+            <Box sx={{ flexGrow: 1 }}>
+                <Grid
+                    container
+                    size={{ xs: 2, sm: 2, md: 2 }}
+                    spacing={2}
+                    sx={{ justifyContent: "center", alignItems: "center" }}
+                >
+                    <Grid size="auto">
+                        <MuiLink component={Link} to="https://engineering.ucsb.edu/">
+                            <Avatar
+                                alt="UCSB Logo"
+                                src="https://lh3.googleusercontent.com/d/1jNw5Ywwq56FHP8AJzoBlShaY7O49cAPC=s220?authuser=0"
+                                style={{ width: 90, height: 90, borderRadius: 8 }}
+                            />
+                        </MuiLink>
+                    </Grid>
+                    <Grid size={{ xs: 10, sm: 10, md: 4}}>
+                        <Typography variant="h3">UC Santa Barbara, B.S. Computer Science</Typography>
+                        <Typography variant="h5">September 2019 - June 2023</Typography>
+                        <Typography variant="h5">Cumulative GPA: 3.3</Typography>
+                    </Grid>
+                    <Grid size={{ xs: 12, sm: 12, md: 6 }}>
+                        <Typography variant="h4" sx={{ mb: 0.5 }}>Relevant Coursework/Programs</Typography>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                gap: 'clamp(0.5rem, 1.5vw, 1rem)',
+                                minWidth: 0,
+                                justifyContent: 'flex-start',
+                                alignItems: 'center',
+                                flexWrap: "wrap" }}>
+                            <Box sx={{ flex: 1, minWidth: 120 }}>
+                                <List component={"p"} sx={{ listStyleType: 'disc', pl: 4, mt: 0 }}>
+                                    <ListItem sx={{ display: 'list-item', p: 0 }}>Computer Graphics</ListItem>
+                                    <ListItem sx={{ display: 'list-item', p: 0 }}>Human Computer Interaction</ListItem>
+                                    <ListItem sx={{ display: 'list-item', p: 0 }}>Interactive Systems</ListItem>
+                                </List>
+                            </Box>
+                            <Box sx={{ flex: 1, minWidth: 120 }}>
+                                <List component="p" sx={{ listStyleType: 'disc', pl: 4, mt: 0 }}>
+                                    <ListItem sx={{ display: 'list-item', p: 0 }}>Multimedia Systems</ListItem>
+                                    <ListItem sx={{ display: 'list-item', p: 0 }}>Society of Hispanic Professional Engineers</ListItem>
+                                </List>
+                            </Box>
                         </Box>
-                        <Box sx={{ flex: 1, minWidth: 120 }}>
-                            <List sx={{ listStyleType: 'disc', pl: 4, mt: 0 }}>
-                                <ListItem sx={{ display: 'list-item', p: 0 }}>Multimedia Systems</ListItem>
-                                <ListItem sx={{ display: 'list-item', p: 0 }}>Society of Hispanic Professional Engineers</ListItem>
-                            </List>
-                        </Box>
-                    </Box>
-                    </Box>
+                    </Grid>
+                </Grid>
             </Box>
             <Box>
                 <Typography variant="h2" align={"center"}>Work Experience</Typography>
@@ -181,6 +184,6 @@ export function ResumeTab() {
                     </List>
                 </Box>
             </Stack>
-        </Box>
+        </Stack>
     )
 }

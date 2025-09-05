@@ -1,6 +1,6 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
-const theme = createTheme({
+let theme = createTheme({
     typography: {
         fontFamily: `'IBM Plex Mono', monospace`,
         h1: {
@@ -15,6 +15,10 @@ const theme = createTheme({
             margin: '0.5rem 0',
             color: '#bebebeff',
         },
+        h3: {
+            fontSize: '1.5rem',
+            color: '#ffffffcc',
+        },
         h4: {
             fontSize: '1.25rem',
             fontWeight: 500,
@@ -24,7 +28,7 @@ const theme = createTheme({
             fontSize: '1rem',
             fontWeight: 400,
             color: '#ffffffcc',
-        },  
+        },
         body1: {
             fontSize: '1rem',
             color: '#ffffffcc',
@@ -50,4 +54,5 @@ const theme = createTheme({
     },
 })
 
+theme = responsiveFontSizes(theme);
 export default theme;
