@@ -61,7 +61,7 @@ export function ResumeTab() {
             <Box>
                 <Typography variant="h2" align={"center"}>Work Experience</Typography>
             </Box>
-            <Box display="flex" sx={{ gap: 'clamp(0.5rem, 1.5vw, 1rem)', alignContent: 'center' }}>
+            <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row'}, alignItems: { xs: 'center', md: 'flex-start' }, gap: 2, alignContent: 'center' }}>
                 <MuiLink component={Link} to="https://www.sonatech.com/" sx={{ display: 'flex', alignItems: 'center' }}>
                     <Box
                         component="img"
@@ -106,7 +106,7 @@ export function ResumeTab() {
                     </Box>
                 </Stack>
             </Box>
-            <Box display="flex" sx={{ gap: 'clamp(0.5rem, 1.5vw, 1rem)', justifyContent: 'left' }}>
+            <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row'}, alignItems: { xs: 'center', md: 'flex-start' }, gap: 2, alignContent: 'center' }}>
                 <MuiLink component={Link} to="https://www.ilm.com/" sx={{ display: 'flex', alignItems: 'center' }}>
                     <Box
                         component="img"
@@ -134,7 +134,7 @@ export function ResumeTab() {
                     </List>
                 </Box>
             </Box>
-            <Box display="flex" sx={{ gap: 'clamp(0.5rem, 1.5vw, 1rem)', justifyContent: 'left' }}>
+            <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row'}, alignItems: { xs: 'center', md: 'flex-start' }, gap: 2, alignContent: 'center' }}>
                 <MuiLink component={Link} to="https://www.northropgrumman.com/" sx={{ display: 'flex', alignItems: 'center' }}>
                     <Box
                         component="img"

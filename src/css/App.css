@@ -73,12 +73,3 @@ a {
   color: #09847A;
   text-decoration: none;
 }
-
-.self-portrait {
-  border-radius: 50px;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-top: 2em;
-  margin-left: 2.5em;
-  margin-right: auto;
-}

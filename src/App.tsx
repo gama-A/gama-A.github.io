@@ -49,12 +49,13 @@ function App() {
                 component="img"
                 src="https://res.cloudinary.com/ddblggaen/image/upload/v1756532619/portrait_rkbjeg.jpg"
                 sx={{
-                  width: "100%",
+                  width: { xs: "80%", md: "100%" },
                   height: "auto",
-                  maxWidth: "100%",
-                  maxHeight: "60vh",
+                  maxHeight: { xs: "40vh", md: "60vh" },
                   objectFit: "contain",
-                  display: "block"
+                  display: "block",
+                  mx: "auto",
+                  mt: 2,
                 }}
               >
               </Box>
