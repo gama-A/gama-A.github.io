@@ -1,22 +1,51 @@
 import './css/App.css'
 import theme from './css/theme'
-import { TabsComponent, getTabs } from './components/Tabs'
+import { TabsComponent } from './components/Tabs'
+import type { TabItems } from './components/Tabs'
 import { Card, CardContent, ThemeProvider, Typography, Box, Divider, Avatar } from '@mui/material'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import Muilink from '@mui/material/Link'
+import { PhotosTab } from "./components/Photos";
+import { MusicTab } from "./components/Music";
+import { ResumeTab } from "./components/Resume";
+import { AboutTab } from "./components/About";
+
 
 function App() {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  
+  const getTabs: TabItems[] =
+  [
+    {
+      label: 'About Me',
+      content: (<AboutTab />)
+    },
+    {
+      label: 'Resume',
+      content: (<ResumeTab isMobile={isMobile}/>)
+    },
+    {
+      label: 'Photography',
+      content: (<PhotosTab isMobile={isMobile}/>) 
+    },
+    {
+      label: 'Music',
+      content: (<MusicTab />)
+    },
+  ];
+
   return (
     <>
       <ThemeProvider theme={theme}>
         <Box
           sx={{
-            height: { xs: 'auto', md: '100%'},
+            height: { xs: 'auto', md: '100%' },
+            width: { xs: 'auto', md: '100%' },
             display: 'flex',
             flexDirection: 'column',
             minHeight: 0,
-            maxHeight: { xs: 'auto', md: '100vh'},
+            maxHeight: { xs: 'auto', md: '100vh' },
+            maxWidth: { xs: 'auto', md: '100vw' },
           }}>
           <Box
             sx={{

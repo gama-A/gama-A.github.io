@@ -10,7 +10,11 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
   };
 }
 
-export function PhotosTab() {
+interface PhotosTabProps {
+  isMobile: boolean;
+}
+
+export function PhotosTab({ isMobile }: PhotosTabProps) {
     return (
       <Box sx={{ p: 2 }}>
         <Typography variant="h4" component="div" align="left" gutterBottom>
@@ -18,7 +22,7 @@ export function PhotosTab() {
         </Typography>
         <ImageList
           sx={{ width: '500', height: '400' }}
-          variant="quilted"
+          variant={isMobile ? "standard" : "quilted"}
           cols={4}
           rowHeight={140}
         >

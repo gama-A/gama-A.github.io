@@ -2,9 +2,13 @@ import { Avatar, Box, Stack, Typography, List, ListItem, Grid } from "@mui/mater
 import MuiLink from '@mui/material/Link';
 import { Link } from "react-router-dom";
 
-// TODO: change the box elements here to Grid elements
 
-export function ResumeTab() {
+interface ResumeTabProps {
+    isMobile: boolean;
+}
+
+// TODO: use isMobile with sx styling
+export function ResumeTab({ isMobile }: ResumeTabProps) {
     return (
         <Stack spacing={2}>
             <Box sx={{ px: 2, width: '100%' }}>

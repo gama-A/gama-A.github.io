@@ -1,9 +1,5 @@
 import { useState } from "react";
 import { Tabs, Tab, Box, Typography } from "@mui/material";
-import { PhotosTab } from "./Photos";
-import { MusicTab } from "./Music";
-import { ResumeTab } from "./Resume";
-import { AboutTab } from "./About";
 
 export interface TabItems {
     label: string;
@@ -13,27 +9,6 @@ export interface TabItems {
 interface TabsComponentProps {
     tabs: TabItems[];
 }
-
-export const getTabs: TabItems[] =
-[
-    {
-        label: 'About Me',
-        content: (<AboutTab />)
-    },
-    {
-        label: 'Resume',
-        content: (<ResumeTab />)
-    },
-    {
-        label: 'Photography',
-        content: (<PhotosTab />) 
-    },
-    {
-        label: 'Music',
-        content: (<MusicTab />)
-    },
-];
-
 
 export function TabsComponent({ tabs }: TabsComponentProps) {
     const [selectedTab, setSelectedTab] = useState(0);
