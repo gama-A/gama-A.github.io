@@ -62,7 +62,7 @@ function App() {
               <Card style={{ backgroundColor: 'rgb(35,35,35)' }}>
                 <CardContent>
                   <Typography component="div" variant="body1" align="left">
-                      Feel free to explore the tabs to see my work, experience and interests.<br/>Contact me:<br/>
+                      Contact me:<br/>
                       <Muilink href="https://www.linkedin.com/in/gama-aristondo-634a80210/" underline='hover'>
                           <Avatar
                               alt="linkedin"

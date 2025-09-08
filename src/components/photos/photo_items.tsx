@@ -144,9 +144,13 @@ export const portraitPhotos = [
   {
     img: 'https://lh3.googleusercontent.com/d/161SFR3U40h2neJLzOgKWK6eRpjv_DOFz',
     title: 'photo4',
+    rows: 2,
+    cols: 2,
   },
   {
     img: 'https://lh3.googleusercontent.com/d/1Le7_Dnnlssq7W3sp6r7eUiry6syzNUwa',
     title: 'photo5',
+    rows: 1,
+    cols: 2,
   }
 ]

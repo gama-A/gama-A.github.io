@@ -23,8 +23,8 @@ export function PhotosTab({ isMobile }: PhotosTabProps) {
         <ImageList
           sx={{ width: '500', height: '400' }}
           variant={isMobile ? "standard" : "quilted"}
-          cols={4}
-          rowHeight={140}
+          cols={isMobile ? 1 : 4}
+          rowHeight={isMobile ? "auto" : 140}
         >
           {landscapePhotos.map((item) => (
             <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
@@ -41,9 +41,9 @@ export function PhotosTab({ isMobile }: PhotosTabProps) {
         </Typography>
         <ImageList
           sx={{ width: '500', height: '400' }}
-          variant="quilted"
-          cols={4}
-          rowHeight={140}
+          variant={isMobile ? "standard" : "quilted"}
+          cols={isMobile ? 1 : 4}
+          rowHeight={isMobile ? "auto" : 140}
         >
           {portraitPhotos.map((item) => (
             <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
@@ -60,9 +60,9 @@ export function PhotosTab({ isMobile }: PhotosTabProps) {
         </Typography>
         <ImageList
           sx={{ width: '500', height: '400' }}
-          variant="quilted"
-          cols={4}
-          rowHeight={140}
+          variant={isMobile ? "standard" : "quilted"}
+          cols={isMobile ? 1 : 4}
+          rowHeight={isMobile ? "auto" : 140}
         >
           {glitchPhotos.map((item) => (
             <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>

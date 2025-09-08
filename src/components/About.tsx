@@ -4,7 +4,7 @@ export function AboutTab() {
     return (
         <Box sx={{ p: 5 }}>
         <Typography>
-            Hello. This site is designed to showcase my current work experience and primary interests of photography and music
+            Hello. This site is designed to showcase my current work experience and primary interests of photography and music. Feel free to explore the tabs to see my work.
         </Typography>
         </Box>
     );
