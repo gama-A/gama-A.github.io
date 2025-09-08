@@ -3,12 +3,8 @@ import MuiLink from '@mui/material/Link';
 import { Link } from "react-router-dom";
 
 
-interface ResumeTabProps {
-    isMobile: boolean;
-}
-
 // TODO: use isMobile with sx styling
-export function ResumeTab({ isMobile }: ResumeTabProps) {
+export function ResumeTab() {
     return (
         <Stack spacing={2}>
             <Box sx={{ px: 2, width: '100%' }}>

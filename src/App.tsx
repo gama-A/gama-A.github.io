@@ -22,7 +22,7 @@ function App() {
     },
     {
       label: 'Resume',
-      content: (<ResumeTab isMobile={isMobile}/>)
+      content: (<ResumeTab />)
     },
     {
       label: 'Photography',
