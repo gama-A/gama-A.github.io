@@ -17,7 +17,7 @@ function App() {
   const getTabs: TabItems[] =
   [
     {
-      label: 'About Me',
+      label: 'About',
       content: (<AboutTab />)
     },
     {

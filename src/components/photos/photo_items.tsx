@@ -148,7 +148,7 @@ export const portraitPhotos = [
     cols: 2,
   },
   {
-    img: 'https://lh3.googleusercontent.com/d/1Le7_Dnnlssq7W3sp6r7eUiry6syzNUwa',
+    img: 'https://lh3.googleusercontent.com/d/1Q3hp4wjR6RzoNJPQDgmrffdtNNf3xv_P',
     title: 'photo5',
     rows: 1,
     cols: 2,

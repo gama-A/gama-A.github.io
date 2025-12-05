@@ -73,3 +73,30 @@ a {
   color: #09847A;
   text-decoration: none;
 }
+
+.audio-dark .rhap_container {
+  background-color: rgb(35, 35, 35);
+  color: #afafaf;
+  box-shadow: none;
+  border-radius: 8px;
+}
+
+.audio-dark .rhap_progress-bar {
+  background: #474747;
+}
+
+.audio-dark .rhap_progress-filled {
+  background: #09847A;
+}
+
+.audio-dark .rhap_controls-section button {
+  color: #eee;
+}
+
+.audio-dark .rhap_controls-section button:hover {
+  color: #09847A;
+}
+
+.audio-dark .rhap_time {
+  color: #afafaf;
+}
