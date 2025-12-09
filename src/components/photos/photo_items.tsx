@@ -144,13 +144,13 @@ export const portraitPhotos = [
   {
     img: 'https://lh3.googleusercontent.com/d/161SFR3U40h2neJLzOgKWK6eRpjv_DOFz',
     title: 'photo4',
-    rows: 2,
+    rows: 3,
     cols: 2,
   },
   {
     img: 'https://lh3.googleusercontent.com/d/1Q3hp4wjR6RzoNJPQDgmrffdtNNf3xv_P',
     title: 'photo5',
-    rows: 1,
+    rows: 2,
     cols: 2,
   }
 ]

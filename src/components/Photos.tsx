@@ -37,7 +37,7 @@ export function PhotosTab({ isMobile }: PhotosTabProps) {
           ))}
         </ImageList>
         <Typography variant="h4" component="div" align="left" gutterBottom>
-          Person Photography
+          Graduation Photography
         </Typography>
         <ImageList
           sx={{ width: '500', height: '400' }}
