@@ -8,7 +8,7 @@ import Muilink from '@mui/material/Link'
 import { PhotosTab } from "./components/Photos";
 import { MusicTab } from "./components/Music";
 import { ResumeTab } from "./components/Resume";
-import { AboutTab } from "./components/About";
+import { SupplementalTab } from "./components/Supplemental";
 
 
 function App() {
@@ -16,10 +16,6 @@ function App() {
   
   const getTabs: TabItems[] =
   [
-    {
-      label: 'About',
-      content: (<AboutTab />)
-    },
     {
       label: 'Resume',
       content: (<ResumeTab />)
@@ -31,6 +27,10 @@ function App() {
     {
       label: 'Music',
       content: (<MusicTab />)
+    },
+    {
+      label: 'Additional Info',
+      content: (<SupplementalTab />)
     },
   ];
 
@@ -58,19 +58,27 @@ function App() {
             }}>
             <Box sx={{ flex: { md: '0 0 30%' }, minWidth: 0 }}>
               <Typography variant="h1" component="div" align="left">Gama Aristondo</Typography>
-              <Typography variant="h2" component="div" align="left">Welcome to my page</Typography>
+              <Typography variant="h2" component="div" align="left">Welcome to my page.</Typography>
               <Card style={{ backgroundColor: 'rgb(35,35,35)' }}>
                 <CardContent>
-                  <Typography component="div" variant="body1" align="left">
-                      Contact me:<br/>
-                      <Muilink href="https://www.linkedin.com/in/gama-aristondo-634a80210/" underline='hover'>
+                  <Typography p={0.25} component="div" variant="body1" align="left">
+                      This site is designed to showcase my current work experience and interests. Feel free to explore.<br/>
+                      (This site is progammed with Material UI components)<br/><br/>
+                      <Muilink href="https://www.linkedin.com/in/gama-aristondo-634a80210/" underline="hover" sx={{ display: "inline-flex", alignItems: "center", mr: 1}}>
                           <Avatar
-                              alt="linkedin"
-                              src="https://lh3.googleusercontent.com/d/1UTOGVj-xhh7bRXf7hAa2Xv5WlV5XxyRG"
-                              variant="square"
+                            alt="linkedin"
+                            src="https://lh3.googleusercontent.com/d/1UTOGVj-xhh7bRXf7hAa2Xv5WlV5XxyRG"
+                            variant="square"
                           />
                       </Muilink>
-                      <Muilink href="mailto:gama.aristondo@gmail.com" color="secondary">gama.aristondo@gmail.com</Muilink>
+                      <Muilink href="https://github.com/gama-A" underline="hover" sx={{ display: "inline-flex", alignItems: "center", mr: 1}}>
+                        <Avatar
+                          alt="github"
+                          src="https://lh3.googleusercontent.com/d/1A9Y0rBFHHhqvxewpv0-EQYvN05M80fA4"
+                          variant="square"
+                        />
+                      </Muilink>
+                      <Muilink href="mailto:gama.aristondo@gmail.com" color="secondary" sx={{ display: "inline-flex", alignItems: "center", mr: 1}}>gama.aristondo@gmail.com</Muilink>
                   </Typography>
                 </CardContent>
               </Card>

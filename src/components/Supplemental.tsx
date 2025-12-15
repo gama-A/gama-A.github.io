@@ -1,6 +1,6 @@
 import { Box, Typography, Divider } from "@mui/material";
 
-export function AboutTab() {
+export function SupplementalTab() {
     return (
         <Box sx={{ p: 2 }}>
             <Typography p={2}>
