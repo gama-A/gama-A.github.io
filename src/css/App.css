@@ -75,7 +75,7 @@ a {
 }
 
 .audio-dark .rhap_container {
-  background-color: rgb(35, 35, 35);
+  background-color: rgb(19, 19, 19);
   color: #afafaf;
   box-shadow: none;
   border-radius: 8px;
@@ -86,7 +86,7 @@ a {
 }
 
 .audio-dark .rhap_progress-filled {
-  background: #09847A;
+  background: #005596;
 }
 
 .audio-dark .rhap_controls-section button {
@@ -94,9 +94,9 @@ a {
 }
 
 .audio-dark .rhap_controls-section button:hover {
-  color: #09847A;
+  color: #005596;
 }
 
 .audio-dark .rhap_time {
-  color: #afafaf;
+  color: #eee;
 }

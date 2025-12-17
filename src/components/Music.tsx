@@ -1,6 +1,7 @@
-import { Box, Typography } from "@mui/material";
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
 
 export function MusicTab() {
     return (

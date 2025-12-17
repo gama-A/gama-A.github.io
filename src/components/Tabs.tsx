@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Tabs, Tab, Box, Typography } from "@mui/material";
+import { Tabs, Tab } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 export interface TabItems {
     label: string;

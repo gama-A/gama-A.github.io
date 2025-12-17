@@ -2,14 +2,63 @@ import './css/App.css'
 import theme from './css/theme'
 import { TabsComponent } from './components/Tabs'
 import type { TabItems } from './components/Tabs'
-import { Card, CardContent, ThemeProvider, Typography, Box, Divider, Avatar } from '@mui/material'
+import Avatar from '@mui/material/Avatar'
+import Card from '@mui/material/Card'
+import CardContent from '@mui/material/CardContent'
+import CssBaseline from '@mui/material/CssBaseline'
+import Box from '@mui/material/Box'
+import Divider from '@mui/material/Divider'
+import Typography from '@mui/material/Typography'
+import { ThemeProvider } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import Muilink from '@mui/material/Link'
 import { PhotosTab } from "./components/Photos";
 import { MusicTab } from "./components/Music";
 import { ResumeTab } from "./components/Resume";
 import { SupplementalTab } from "./components/Supplemental";
+import { useEffect, useState } from "react";
 
+
+const myPictures = [
+  "https://res.cloudinary.com/ddblggaen/image/upload/v1756532619/portrait_rkbjeg.jpg",
+  "https://res.cloudinary.com/ddblggaen/image/upload/v1765858954/000883540010_duo39h.jpg"
+]
+
+function FadingImages() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % myPictures.length);
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <Box sx={{ position: "relative"}}>
+      {myPictures.map((img, i) => (
+        <Box
+          component="img"
+          src={img}
+          key={img}
+          sx={{
+            position: "absolute",
+            width: {xs: "80%", md: "100%"},
+            height: "auto",
+            maxHeight: {xs: "40vh", md: "60vh"},
+            objectFit: "contain",
+            display: "block",
+            mx: "auto",
+            mt: 2,
+            transition: "opacity 1s ease-in-out",
+            opacity: i === index ? 1 : 0,
+          }}
+        />
+      ))}
+    </Box>
+  )
+}
 
 function App() {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -37,6 +86,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
+      <CssBaseline />
         <Box
           sx={{
             height: { xs: 'auto', md: '100%' },
@@ -82,20 +132,7 @@ function App() {
                   </Typography>
                 </CardContent>
               </Card>
-              <Box
-                component="img"
-                src="https://res.cloudinary.com/ddblggaen/image/upload/v1756532619/portrait_rkbjeg.jpg"
-                sx={{
-                  width: { xs: "80%", md: "100%" },
-                  height: "auto",
-                  maxHeight: { xs: "40vh", md: "60vh" },
-                  objectFit: "contain",
-                  display: "block",
-                  mx: "auto",
-                  mt: 2,
-                }}
-              >
-              </Box>
+              <FadingImages />
               {isMobile && (
                 <Box sx={{ mt: 2 }}>
                   <TabsComponent tabs={getTabs} />

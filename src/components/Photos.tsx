@@ -1,4 +1,7 @@
-import { Box, ImageList, ImageListItem, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import Typography from "@mui/material/Typography";
 import { glitchPhotos, landscapePhotos, portraitPhotos } from "./photos/photo_items";
 
 function srcset(image: string, size: number, rows = 1, cols = 1) {

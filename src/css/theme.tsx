@@ -1,6 +1,7 @@
-import { createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { darkScrollbar } from "@mui/material";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
-let theme = createTheme({
+const theme = responsiveFontSizes(createTheme({
     typography: {
         fontFamily: `'IBM Plex Mono', monospace`,
         h1: {
@@ -37,7 +38,7 @@ let theme = createTheme({
     palette: {
         mode: 'dark',
         primary: {
-            main: '#003660',
+            main: '#003c69ff',
 
         },
         secondary: {
@@ -52,7 +53,13 @@ let theme = createTheme({
             secondary: '#bbbbbbcc',
         },
     },
-})
+    components: {
+        MuiCssBaseline: {
+            styleOverrides: (themeParam) => ({
+                body: themeParam.palette.mode === 'dark' ? darkScrollbar() : null,
+            })
+        }
+    }
+}))
 
-theme = responsiveFontSizes(theme);
 export default theme;
