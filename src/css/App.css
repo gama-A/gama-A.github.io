@@ -62,18 +62,6 @@ body {
   }
 }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-a {
-  color: #09847A;
-  text-decoration: none;
-}
-
 .audio-dark .rhap_container {
   background-color: rgb(19, 19, 19);
   color: #afafaf;

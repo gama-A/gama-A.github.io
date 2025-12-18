@@ -8,13 +8,13 @@ const theme = responsiveFontSizes(createTheme({
             fontSize: '3rem',
             fontWeight: 700,
             margin: '1rem 0',
-            color: '#bebebeff',
+            color: '#eee',
         },
         h2: {
             fontSize: '1.75rem',
             fontWeight: 600,
             margin: '0.5rem 0',
-            color: '#bebebeff',
+            color: '#eee',
         },
         h3: {
             fontSize: '1.5rem',

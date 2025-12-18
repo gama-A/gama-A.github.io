@@ -20,7 +20,7 @@ export function TabsComponent({ tabs }: TabsComponentProps) {
     };
 
     return (
-        <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, overflowY: 'auto', minHeight: 0 }}>
+        <Box sx={{ display: "flex", flexDirection: "column", flexGrow: 1, overflowY: "auto", minHeight: 0 }}>
             <Tabs
                 value={selectedTab}
                 onChange={handleChange}
@@ -30,7 +30,7 @@ export function TabsComponent({ tabs }: TabsComponentProps) {
                 variant="standard"
                 sx={{
                     borderBottom: 1,
-                    borderColor: 'text.primary',
+                    borderColor: "text.primary",
                     py: 1.5
                 }}
             >
@@ -45,7 +45,7 @@ export function TabsComponent({ tabs }: TabsComponentProps) {
                 sx={{
                     p: 1,
                     flexGrow: 1,
-                    overflowY: 'auto',
+                    overflowY: "auto",
                     minHeight: 0,
                 }}
             >
