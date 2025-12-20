@@ -27,7 +27,7 @@ export function TabsComponent({ tabs }: TabsComponentProps) {
                 centered
                 textColor="inherit"
                 indicatorColor="secondary"
-                variant="standard"
+                variant="fullWidth"
                 sx={{
                     borderBottom: 1,
                     borderColor: "text.primary",

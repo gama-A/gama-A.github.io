@@ -38,7 +38,13 @@ function FadingImages() {
   }, []);
 
   return (
-    <Box sx={{ position: "relative"}}>
+    <Box 
+      sx={{
+        position: "relative",
+        height: { xs: "40vh", md: "45vh" },
+        mt: 1,
+        mx: "auto"
+      }}>
       {myPictures.map((img, i) => (
         <Box
           component="img"
@@ -46,13 +52,10 @@ function FadingImages() {
           key={img}
           sx={{
             position: "absolute",
-            width: {xs: "80%", md: "100%"},
-            height: "auto",
-            maxHeight: {xs: "40vh", md: "60vh"},
+            width: "100%",
+            height: "100%",
             objectFit: "contain",
             display: "block",
-            mx: "auto",
-            mt: 2,
             transition: "opacity 1s ease-in-out",
             opacity: i === index ? 1 : 0,
           }}
