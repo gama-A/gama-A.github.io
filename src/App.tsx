@@ -2,8 +2,6 @@ import "./css/App.css";
 import theme from "./css/theme";
 import { TabsComponent } from "./components/Tabs";
 import type { TabItems } from "./components/Tabs";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
@@ -14,11 +12,13 @@ import Muilink from "@mui/material/Link";
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GithubIcon from "@mui/icons-material/GitHub";
+import { BioTab } from "./components/Bio";
 import { PhotosTab } from "./components/Photos";
 import { MusicTab } from "./components/Music";
 import { ResumeTab } from "./components/Resume";
-import { SupplementalTab } from "./components/Supplemental";
+// import { SupplementalTab } from "./components/Supplemental";
 import { useEffect, useState } from "react";
+import { Container, GlobalStyles } from "@mui/material";
 
 
 const myPictures = [
@@ -32,7 +32,7 @@ function FadingImages() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % myPictures.length);
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
@@ -71,6 +71,10 @@ function App() {
   const getTabs: TabItems[] =
   [
     {
+      label: "Bio",
+      content: (<BioTab />)
+    },
+    {
       label: "Resume",
       content: (<ResumeTab />)
     },
@@ -82,68 +86,72 @@ function App() {
       label: "Music",
       content: (<MusicTab />)
     },
-    {
-      label: "Additional Info",
-      content: (<SupplementalTab />)
-    },
   ];
 
   return (
     <>
       <ThemeProvider theme={theme}>
-      <CssBaseline />
-        <Box
+        <CssBaseline />
+        <GlobalStyles styles={{
+          html: { height: "100%", overflow: "hidden" },
+          body: { height: "100%", overflow: "hidden" },
+          "#root": { height: "100%", overflow: "hidden" }
+        }}/>
+        <Container
+          maxWidth="xl"
+          disableGutters
           sx={{
-            height: { xs: "auto", md: "100%" },
-            width: { xs: "auto", md: "100%" },
-            display: "flex",
-            flexDirection: "column",
-            minHeight: 0,
-            maxHeight: { xs: "auto", md: "100vh" },
-            maxWidth: { xs: "auto", md: "100vw" },
+            px: { xs: 2, md: 6 },
+            overflow: "hidder",
+            height: "100vh"
           }}>
           <Box
             sx={{
+              height: "100%",
               display: "flex",
-              flex: "1 1 auto",
-              gap: 2,
-              flexDirection: { xs: "column", md: "row" },
-              alignItems: { xs: "flex-start", md: "stretch" },
-              overflow: { xs: "visible", md: "hidden" },
+              flexDirection: "column",
+              minHeight: 0,
             }}>
-            <Box sx={{ flex: { md: "0 0 30%" }, minWidth: 0 }}>
-              <Typography variant="h1" component="div" align="left">Gama Aristondo</Typography>
-              <Typography variant="h2" component="div" align="left">Welcome to my page.</Typography>
-              <Card style={{ backgroundColor: "rgb(35,35,35)" }}>
-                <CardContent>
-                  <Typography p={0.25} component="div" variant="body1" align="left">
-                      This site is designed to showcase my current work experience and interests. Feel free to explore.<br/>
-                      (This site is progammed with Material UI components)<br/><br/>
-                      <Muilink href="https://www.linkedin.com/in/gama-aristondo-634a80210/" color="#FFFFFF" sx={{ display: "inline-flex", alignItems: "center", mr: 0.5}}>
-                        <LinkedInIcon fontSize="large"/>
-                      </Muilink>
-                      <Muilink href="https://github.com/gama-A" color="#FFFFFF" sx={{ display: "inline-flex", alignItems: "center", mr: 0.5}}>
-                        <GithubIcon fontSize="large"/>
-                      </Muilink>
-                      <Muilink href="mailto:gama.aristondo@gmail.com" color="#FFFFFF" sx={{ display: "inline-flex", alignItems: "center", mr: 0.5}}>
-                        <EmailIcon fontSize="large"/>
-                      </Muilink>
-                  </Typography>
-                </CardContent>
-              </Card>
-              <FadingImages />
-              {isMobile && (
-                <Box sx={{ mt: 2 }}>
-                  <TabsComponent tabs={getTabs} />
-                </Box>
-              )}
-            </Box>
-            <Divider orientation="vertical" flexItem sx={{ display: { xs: "none", md: "block" }, bgcolor: "text.primary", mx: 1 }} />
-            <Box sx={{ flex: { md: "1 1 70%" }, minHeight: 0, overflow: "auto", display: isMobile ? "none" : "block" }}>
-              <TabsComponent tabs={getTabs} />
+            <Box
+              sx={{
+                display: "flex",
+                flex: "1 1 auto",
+                minHeight: 0,
+                gap: 2,
+                flexDirection: { xs: "column", md: "row" },
+              }}>
+              <Box sx={{ flex: { md: "0 0 25%" }, minWidth: 0 }}>
+                <Typography variant="h1" component="div" align="left">Gama Aristondo</Typography>
+                <Typography variant="h2" component="div" align="left">Welcome to my page.</Typography>
+                <Muilink href="https://www.linkedin.com/in/gama-aristondo-634a80210/" color="#FFFFFF" sx={{ justifyContent: "left", mr: 0.5}}>
+                  <LinkedInIcon fontSize="large"/>
+                </Muilink>
+                <Muilink href="https://github.com/gama-A" color="#FFFFFF" sx={{ display: "inline-flex", mr: 0.5}}>
+                  <GithubIcon fontSize="large"/>
+                </Muilink>
+                <Muilink href="mailto:gama.aristondo@gmail.com" color="#FFFFFF" sx={{ display: "inline-flex", mr: 0.5}}>
+                  <EmailIcon fontSize="large"/>
+                </Muilink>
+                <FadingImages />
+                {isMobile && (
+                  <Box sx={{ mt: 2 }}>
+                    <TabsComponent tabs={getTabs} />
+                  </Box>
+                )}
+              </Box>
+              <Divider orientation="vertical" flexItem sx={{ display: { xs: "none", md: "block" }, bgcolor: "text.primary", mx: 1 }} />
+              <Box
+                sx={{
+                  flex: { md: "1 1 75%" },
+                  minHeight: 0,
+                  overflowY: "auto",
+                  display: isMobile ? "none" : "block",
+                }}>
+                <TabsComponent tabs={getTabs} />
+              </Box>
             </Box>
           </Box>
-        </Box>
+        </Container>
       </ThemeProvider>
     </>
   )

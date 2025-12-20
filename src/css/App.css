@@ -11,7 +11,6 @@ html, body, #root {
   flex-direction: column;
 }
 
-/* make sizing predictable and prevent padding from increasing element size */
 * { box-sizing: border-box; }
 
 body {
@@ -22,7 +21,6 @@ body {
   -moz-animation: fadein ease 3s;
   -webkit-animation: fadein ease 3s;
   -o-animation: fadein ease 3s;
-  overflow-x: hidden;
 }
 
 @keyframes fadein {

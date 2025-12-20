@@ -20,7 +20,7 @@ export function ResumeTab() {
     };
 
     return (
-        <Stack spacing={2}>
+        <Stack spacing={2} py={3}>
             <Box sx={{ px: 2, width: "100%" }}>
                 <Typography variant="h2" align={"center"}>Education</Typography>
             </Box>

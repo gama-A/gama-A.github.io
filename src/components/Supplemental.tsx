@@ -7,7 +7,6 @@ export function SupplementalTab() {
         <Box sx={{ p: 2 }}>
             <Typography p={1} align="left" variant="h2">Documents</Typography>
             <Button variant="contained" color="secondary">Unofficial Transcript</Button>
-            <Button variant="contained" color="secondary">Resume</Button>
         </Box>
     );
 }
