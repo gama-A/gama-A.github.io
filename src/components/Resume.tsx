@@ -1,4 +1,5 @@
 import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import List from "@mui/material/List";
@@ -11,6 +12,13 @@ import { Link } from "react-router-dom";
 
 // TODO: use isMobile with sx styling
 export function ResumeTab() {
+    const onDownload = () => {
+        const link = document.createElement("a");
+        link.download = "gama-resume.pdf";
+        link.href = "../../public/assets/Resume.pdf";
+        link.click();
+    };
+
     return (
         <Stack spacing={2}>
             <Box sx={{ px: 2, width: "100%" }}>
@@ -189,6 +197,11 @@ export function ResumeTab() {
                         </ListItem>
                     </List>
                 </Box>
+            </Stack>
+            <Stack direction={"row"} justifyContent="center">
+                <Button onClick={onDownload} variant="contained" color="secondary">
+                    Download Resume
+                </Button>
             </Stack>
         </Stack>
     )
