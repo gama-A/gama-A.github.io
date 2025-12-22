@@ -101,7 +101,7 @@ function App() {
           maxWidth="xl"
           disableGutters
           sx={{
-            px: { xs: 3, md: 6 },
+            px: { xs: 1, md: 6 },
             overflow: { xs: "visible", md: "hidden" },
             height: { xs: "auto", md: "100vh" }
           }}>
