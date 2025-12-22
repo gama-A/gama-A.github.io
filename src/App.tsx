@@ -93,17 +93,17 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <GlobalStyles styles={{
-          html: { height: "100%", overflow: "hidden" },
-          body: { height: "100%", overflow: "hidden" },
-          "#root": { height: "100%", overflow: "hidden" }
+          html: { height: "100%", overflow: isMobile ? "auto" : "hidden" },
+          body: { height: "100%", overflow: isMobile ? "auto" : "hidden" },
+          "#root": { height: "100%", overflow: isMobile ? "auto" : "hidden" }
         }}/>
         <Container
           maxWidth="xl"
           disableGutters
           sx={{
-            px: { xs: 2, md: 6 },
-            overflow: "hidder",
-            height: "100vh"
+            px: { xs: 3, md: 6 },
+            overflow: { xs: "visible", md: "hidden" },
+            height: { xs: "auto", md: "100vh" }
           }}>
           <Box
             sx={{
