@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactElement } from "react";
 import { Tabs, Tab } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -8,11 +8,12 @@ export interface TabItems {
     content: React.ReactNode;
 }
 
-interface TabsComponentProps {
+export interface TabsComponentProps {
     tabs: TabItems[];
+    isMobile: boolean
 }
 
-export function TabsComponent({ tabs }: TabsComponentProps) {
+export function TabsComponent(tabsComponent: TabsComponentProps): ReactElement {
     const [selectedTab, setSelectedTab] = useState(0);
 
     const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
@@ -27,14 +28,14 @@ export function TabsComponent({ tabs }: TabsComponentProps) {
                 centered
                 textColor="inherit"
                 indicatorColor="secondary"
-                variant="fullWidth"
+                variant={tabsComponent.isMobile ? "standard" : "fullWidth"}
                 sx={{
                     borderBottom: 1,
                     borderColor: "text.primary",
                     py: 1.5
                 }}
             >
-                {tabs.map((tab, index) => (
+                {tabsComponent.tabs.map((tab, index) => (
                     <Tab
                         key={index}
                         label={tab.label}
@@ -49,7 +50,7 @@ export function TabsComponent({ tabs }: TabsComponentProps) {
                     minHeight: 0,
                 }}
             >
-                <Typography component="div" fontFamily={"monospace"}>{tabs[selectedTab].content}</Typography>
+                <Typography component="div" fontFamily={"monospace"}>{tabsComponent.tabs[selectedTab].content}</Typography>
             </Box>
         </Box>
     );

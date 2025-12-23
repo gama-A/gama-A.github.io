@@ -16,6 +16,7 @@ import { BioTab } from "./components/Bio";
 import { PhotosTab } from "./components/Photos";
 import { MusicTab } from "./components/Music";
 import { ResumeTab } from "./components/Resume";
+import type { TabsComponentProps } from "./components/Tabs";
 // import { SupplementalTab } from "./components/Supplemental";
 import { useEffect, useState } from "react";
 import { Container, GlobalStyles } from "@mui/material";
@@ -68,7 +69,7 @@ function FadingImages() {
 function App() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   
-  const getTabs: TabItems[] =
+  const tabs: TabItems[] =
   [
     {
       label: "Bio",
@@ -87,6 +88,11 @@ function App() {
       content: (<MusicTab />)
     },
   ];
+
+  const tabsComponentProps: TabsComponentProps = {
+    tabs,
+    isMobile
+  }
 
   return (
     <>
@@ -135,7 +141,7 @@ function App() {
                 <FadingImages />
                 {isMobile && (
                   <Box sx={{ mt: 2 }}>
-                    <TabsComponent tabs={getTabs} />
+                    <TabsComponent {...tabsComponentProps}/>
                   </Box>
                 )}
               </Box>
@@ -147,7 +153,7 @@ function App() {
                   overflowY: "auto",
                   display: isMobile ? "none" : "block",
                 }}>
-                <TabsComponent tabs={getTabs} />
+                <TabsComponent {...tabsComponentProps}/>
               </Box>
             </Box>
           </Box>
