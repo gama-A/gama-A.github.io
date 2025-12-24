@@ -4,7 +4,6 @@ import { TabsComponent } from "./components/Tabs";
 import type { TabItems } from "./components/Tabs";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { ThemeProvider } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -105,9 +104,9 @@ function App() {
         }}/>
         <Container
           maxWidth="xl"
-          disableGutters
+          disableGutters={false}
           sx={{
-            px: { xs: 1, md: 6 },
+            px: { xs: 0.25, md: 6 },
             overflow: { xs: "visible", md: "hidden" },
             height: { xs: "auto", md: "100vh" }
           }}>
@@ -145,7 +144,6 @@ function App() {
                   </Box>
                 )}
               </Box>
-              <Divider orientation="vertical" flexItem sx={{ display: { xs: "none", md: "block" }, bgcolor: "text.primary", mx: 1 }} />
               <Box
                 sx={{
                   flex: { md: "1 1 75%" },

@@ -28,7 +28,9 @@ export function TabsComponent(tabsComponent: TabsComponentProps): ReactElement {
                 centered
                 textColor="inherit"
                 indicatorColor="secondary"
-                variant={tabsComponent.isMobile ? "standard" : "fullWidth"}
+                variant={tabsComponent.isMobile ? "scrollable" : "fullWidth"}
+                scrollButtons={tabsComponent.isMobile ? "auto" : false}
+                allowScrollButtonsMobile={true}
                 sx={{
                     borderBottom: 1,
                     borderColor: "text.primary",
